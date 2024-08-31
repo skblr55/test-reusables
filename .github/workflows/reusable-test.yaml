@@ -1,0 +1,14 @@
+# .github/workflows/main.yml
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  use-reusable-workflow:
+    uses: skblr55/Reusable-workflow/.github/workflows/reusable-workflow.yaml@main
+    with:
+      username: 'Alice'
+      environment: 'staging'
